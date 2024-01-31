@@ -1,17 +1,19 @@
-# Welcome to MkDocs
+# Welcome to SyncrnzdClk's NoteBook
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## About Me
+本人是浙江大学计算机专业一个小白，目前对数学和计算机相关的知识比较感兴趣，本NoteBook会持续更新作者学习的知识（可能会非常慢，正如上文所言，本人是小白，所以学习知识可能比较慢，整理笔记的时间可能就更少了）。
 
-## Commands
+## About My Notes
+由于本人是比较喜欢国外的教材和课程，所以接触到的大部分都是英文的材料，有些地方可能翻译成中文会有点困难。
+关于这份笔记的初衷，实际上是起源于笔者学习过程中发现的一些现象。就是笔者个人学习的过程中，遇到新的知识点，常常因为无法把抽象的东西具象化，所以导致看了一大串证明最后脑子什么也没留下，或者是遇到头疼的问题苦于没有灵感。这些时候往往意味着笔者会花上很多时间去思考，等到结果出来之后又会觉得怎么这么简单。所以希望创建这么一份笔记，作为自己思路的记录，同时也希望能帮助一些同学，发现一点点的灵感。所以请**千万不要**认为这份笔记能帮你系统构建出学习的理论，其目的在于对于一些抽象的知识提供作者的一些灵感，构建出一幅图像。
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Currently Updating
+Notes about the **abstract algebra** and **convex optimization**
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Future Expectations
+- **Computer Organization**
+- **Advanced Data Structure & Algorithm Analysis**
+- **Database System**
+- **Discrete Math**
+- **Object-Oriented Programming(in C++)**
+- **Artificial Intelligence**
