@@ -7,7 +7,9 @@ nav:
   - HomePage: index.md
   - abstract_algebra: 
     - pre: abstract_algebra/pre.md
-    - abstract algebra: abstract_algebra/abstract algebra.md 
+    - notes: 
+      - preliminaries and integers: abstract_algebra\notes\preliminaries.md
   - convex optimization: 
     - pre: convex optimization/pre.md
-    - convex optimization: convex optimization/notes/convex sets and functions.md
+    - notes: 
+      - convex sets and functions: convex optimization/notes/convex sets and functions.md
