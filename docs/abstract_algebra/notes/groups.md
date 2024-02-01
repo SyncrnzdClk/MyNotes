@@ -36,4 +36,6 @@ $$
 - $$ g\in G, g^mg^n = g^{m+n} $$
 - $$ (g^m)^n = g^{mn}$$
 - $$ (gh)^n = (h^{-1}g^{-1})^{-n}, \space \text{if G is abelian},\space (gh)^n = g^nh^n$$
-- 
+
+## subgroups
+
