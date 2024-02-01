@@ -17,10 +17,38 @@
 ## division algorithm
 
 ### description
+let a and b be integers, with $b > 0$. then there exist **unique** integers q and r such that:
+$a = bq + r$ where $0 \le r < b$.
+
+*remark*: 对于这类证明，我们要验证两方面，一是存在性，二是唯一性，这种证明套路十分常见。这个定理**异常重要**，证明思路也是非常值得借鉴的。（证明过程在手写补充笔记中有）
+ 
+## gcd
+let a and b be nonzero integers. then there exist integers r and s such that 
 $$
-    let a and b be integers, with b > 0. then there exist unique integers q and r such that:
-    a = bq + r
-    where 0 < r < b.
+    gcd(a, b) = ar + bs.
 $$
 
+*remark*：这个定理的证明和上一个定理类似，都用到了well-ordering principal
 
+### corollary
+let a and b be two integers that are relatively prime. then there exist integers r and s such that $ar + bs = 1$
+
+## Euclidean algorithms
+这个算法过于有名，所以很多书上都能看到，这里不再赘述，但是这个算法非常重要，是余数理论的基础。用简短的一点的话讲就是**辗转相除**
+
+## prime numbers
+- let a and b be integers and p be a prime number. if $ p | ab $, then either $p | a$ or $p | b$
+- there exist an infinite number of primes
+
+## fundamental theorem of arithmetic
+let n be an integer such that $n > 1$. then
+$$
+    n = p_1p_2...p_k,
+$$
+where $p_1,...,p_k$ are primes (not necessary distinct). Furthermore, this factorization is unique; that is, if
+$$
+    n = q_1q_2...q_l,
+$$
+then $k=l$ and the $q_i's$ are just the $p_i's$ rearraned.
+
+*remark*：这个定理的证明同样是经典类型，即存在+唯一性的证明
