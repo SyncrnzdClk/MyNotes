@@ -10,6 +10,7 @@ nav:
     - pre: abstract_algebra/pre.md
     - notes: 
       - preliminaries and integers: abstract_algebra\notes\preliminaries.md
+      - groups: abstract_algebra\notes\groups.md
   - convex optimization: 
     - pre: convex optimization/pre.md
     - notes: 
