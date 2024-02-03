@@ -39,3 +39,22 @@ $$
 
 ## subgroups
 
+### definition
+we define a subgroup H of a group G to be a subset H of G such that when the group operation of G is restricted to H, H is a group in its own right.
+
+### some criteria for determining exactly when a subset of G is a subgroup
+第一类判断条件
+
+1. G的单位元在H中
+
+2. $\text{如果}h_1, h_2 \in H, \text{那么}, h_1h_2 \in H$。
+
+3. $\text{如果} h \in H, \text{那么} h^{-1} \in H$
+
+第二类判断条件
+
+1. H非空
+
+2. $\text{如果} g,h \in H, \text{那么} gh^{-1} \in H$
+
+
