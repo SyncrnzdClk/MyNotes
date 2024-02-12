@@ -14,6 +14,8 @@
         <link rel="prev" href="../../pre/">
       
       
+        <link rel="next" href="../convex%20optimization%20basics/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
@@ -954,6 +956,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#affine-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      affine composition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      general composition
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -963,6 +983,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../convex%20optimization%20basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    convex optimization basics
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1433,6 +1474,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#affine-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      affine composition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      general composition
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1475,7 +1534,7 @@
 <h3 id="empty-set-point-line">empty set, point, line<a class="headerlink" href="#empty-set-point-line" title="Permanent link">&para;</a></h3>
 <p>这一类属于是平凡的或者是简单情况，不过多赘述</p>
 <h3 id="norm-ball">norm ball<a class="headerlink" href="#norm-ball" title="Permanent link">&para;</a></h3>
-<p>范数球，对于任意的范数（范数的定义请回顾线性代数）。常用的范数就是p-范数，p-范数中1范数、2范数以及无穷范数（用最基础的微积分知识就能证明<strong>无穷范数</strong>就是向量中<strong>最大的分量</strong>）会比较常用。</p>
+<p>范数球，对于任意一个范数（范数的定义请回顾线性代数），指定半径r，满足范数小于r的所有范数。常用的范数就是p-范数，p-范数中1范数、2范数以及无穷范数（用最基础的微积分知识就能证明<strong>无穷范数</strong>就是向量中<strong>最大的分量</strong>）会比较常用。</p>
 <h3 id="hyperplane">hyperplane<a class="headerlink" href="#hyperplane" title="Permanent link">&para;</a></h3>
 <p>超平面，一个线性方程就代表了一个超平面。</p>
 <h3 id="halfspace">halfspace<a class="headerlink" href="#halfspace" title="Permanent link">&para;</a></h3>
@@ -1540,7 +1599,11 @@
 <h3 id="pointwise-maximization">pointwise maximization<a class="headerlink" href="#pointwise-maximization" title="Permanent link">&para;</a></h3>
 <p>我们有一系列函数，每个函数都是凸的，那么对他们逐点取最大值，得到的函数仍然是一个凸函数（注意这个函数的定义域应该是那一系列函数的定义域的交）。</p>
 <h3 id="partial-minimization">partial minimization<a class="headerlink" href="#partial-minimization" title="Permanent link">&para;</a></h3>
-<p>constructing...</p>
+<p>这个定理告诉我们对于一个函数g，我们把他的定义域分成两个空间的直和，那么自变量相应地被写成两个分量的组（x,y），对于第一个分量(x)给定，我们限定在某一个凸集C中变化第二个分量(y)，得到的最小值作为一个新的函数f的函数值（那么这个定义的新的函数f应当是关于第一个分量的函数），那么个这个函数f仍然是凸的。</p>
+<h3 id="affine-composition">affine composition<a class="headerlink" href="#affine-composition" title="Permanent link">&para;</a></h3>
+<p>非常常用的变换。一个函数如果本来就是凸的，那么将他的自变量经过仿射变换之后，得到的新函数，仍然是凸的。</p>
+<h3 id="general-composition">general composition<a class="headerlink" href="#general-composition" title="Permanent link">&para;</a></h3>
+<p>关于函数复合的凸性变化。这可以用对一元函数求二阶导的形式来记住。</p>
 
 
 
