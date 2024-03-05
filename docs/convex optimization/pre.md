@@ -1,4 +1,4 @@
-# Welcome to Abstract Algebra
+# Welcome to Convex Optimization
 
 ## Learning Materials
 

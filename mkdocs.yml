@@ -18,6 +18,10 @@ nav:
       - convex sets and functions: convex optimization/notes/convex sets and functions.md
       - convex optimization basics: convex optimization/notes/convex optimization basics.md
       - gradiant descent: convex optimization/notes/gradient descent.md
+  - probability:
+    - pre: probability/pre.md
+    - notes:
+      - probability space: probability/probability space.md
 markdown_extensions:
   - abbr
   - pymdownx.caret
