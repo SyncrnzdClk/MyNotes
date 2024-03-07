@@ -11,22 +11,22 @@
       
       
       
-        <link rel="prev" href="../convex%20optimization%20basics/">
+        <link rel="prev" href="../pre/">
       
       
-        <link rel="next" href="../../../probability/pre/">
+        <link rel="next" href="../kNN/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
-        <title>gradiant descent - SyncrnzdClk's Notebook</title>
+        <title>perceptron - SyncrnzdClk's Notebook</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
       
 
@@ -45,9 +45,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gradient-descent" class="md-skip">
+        <a href="#perceptron" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="SyncrnzdClk&#39;s Notebook" class="md-header__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
+    <a href="../.." title="SyncrnzdClk&#39;s Notebook" class="md-header__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              gradiant descent
+              perceptron
             
           </span>
         </div>
@@ -177,7 +177,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="SyncrnzdClk&#39;s Notebook" class="md-nav__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
+    <a href="../.." title="SyncrnzdClk&#39;s Notebook" class="md-nav__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -195,7 +195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -252,7 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../abstract_algebra/pre/" class="md-nav__link">
+      <a href="../../abstract_algebra/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -310,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../abstract_algebra/notes/preliminaries/" class="md-nav__link">
+      <a href="../../abstract_algebra/notes/preliminaries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -331,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../abstract_algebra/notes/groups/" class="md-nav__link">
+      <a href="../../abstract_algebra/notes/groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -352,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../abstract_algebra/notes/cyclic%20groups/" class="md-nav__link">
+      <a href="../../abstract_algebra/notes/cyclic%20groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,21 +385,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -413,7 +411,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             convex optimization
@@ -427,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pre/" class="md-nav__link">
+      <a href="../../convex%20optimization/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -445,21 +443,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -473,7 +469,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             notes
@@ -487,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../convex%20sets%20and%20functions/" class="md-nav__link">
+      <a href="../../convex%20optimization/notes/convex%20sets%20and%20functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../convex%20optimization%20basics/" class="md-nav__link">
+      <a href="../../convex%20optimization/notes/convex%20optimization%20basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -526,19 +522,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../convex%20optimization/notes/gradient%20descent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -547,7 +534,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -612,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../probability/pre/" class="md-nav__link">
+      <a href="../../probability/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -670,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../probability/probability%20space/" class="md-nav__link">
+      <a href="../../probability/probability%20space/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,19 +689,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -729,7 +717,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             statistical learning
@@ -743,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../statistical%20learning/pre/" class="md-nav__link">
+      <a href="../pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,19 +749,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -787,7 +777,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             notes
@@ -798,10 +788,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../statistical%20learning/perceptron/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    perceptron
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -810,6 +820,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loss-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      loss function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      learning strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drawback" class="md-nav__link">
+    <span class="md-ellipsis">
+      drawback
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#math-behind-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      math behind it
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -822,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../statistical%20learning/kNN/" class="md-nav__link">
+      <a href="../kNN/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,6 +937,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loss-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      loss function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      learning strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drawback" class="md-nav__link">
+    <span class="md-ellipsis">
+      drawback
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#math-behind-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      math behind it
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -884,7 +994,23 @@
                   
 
 
-<h1 id="gradient-descent">gradient descent<a class="headerlink" href="#gradient-descent" title="Permanent link">&para;</a></h1>
+<h1 id="perceptron">perceptron<a class="headerlink" href="#perceptron" title="Permanent link">&para;</a></h1>
+<h2 id="loss-function">loss function<a class="headerlink" href="#loss-function" title="Permanent link">&para;</a></h2>
+<p>一个自然的想法去定义损失函数，就是全部分类错误的点的数量。但是这个函数不好分析，而且是非凸的。所以我们转而使用当前超平面和所有误分类点的距离之和作为loss function。</p>
+<h2 id="learning-strategy">learning strategy<a class="headerlink" href="#learning-strategy" title="Permanent link">&para;</a></h2>
+<p>对于这个损失函数，如果我们使用梯度下降的方法来进行优化，那么我们需要知道每次更新参数的时候所有的误分类点到超平面的距离。这种方法计算量开销比较大，所以我们采取更加简便但是效果和梯度下降类似的随机梯度下降，也就是当我们扫描特征向量时，一旦扫描到误分类的数据，就更新参数（利用随机梯度下降算法，具体实现这里不做赘述）。这样虽然最坏的情况下仍然需要扫描所有的数据，但是不会每次都扫描所有，可以大大减小计算的开销。</p>
+<h2 id="drawback">drawback<a class="headerlink" href="#drawback" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>感知机说到底是个线性的函数，无法对复杂的逻辑进行分类。比如异或逻辑（也就是对于数据点X，其正确的标签是各个分量异或的结果）。</p>
+</li>
+<li>
+<p>感知机只能对线性可分的数据进行分类，但是无法对线性不可分的数据进行分类，这一点会在后面的SVM中解决（利用软间隔）</p>
+</li>
+</ol>
+<h2 id="math-behind-it">math behind it<a class="headerlink" href="#math-behind-it" title="Permanent link">&para;</a></h2>
+<p>感知机要求数据是线性可分的，那么我们自然会想，怎么样的数据满足线性可分的条件呢？</p>
+<p>事实上，两类标签的数据线性可分当且仅当他们各自的凸包没有交集。关于这一点，本质上是seperating hyperplane theorem的应用。</p>
 
 
 
@@ -931,14 +1057,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
-        <script src="../../../javascripts/extra.js"></script>
+        <script src="../../javascripts/extra.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

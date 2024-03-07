@@ -11,22 +11,20 @@
       
       
       
-        <link rel="prev" href="../convex%20optimization%20basics/">
+        <link rel="prev" href="../perceptron/">
       
       
-        <link rel="next" href="../../../probability/pre/">
       
-      
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
-        <title>gradiant descent - SyncrnzdClk's Notebook</title>
+        <title>kNN - SyncrnzdClk's Notebook</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
       
 
@@ -45,9 +43,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gradient-descent" class="md-skip">
+        <a href="#knn" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="SyncrnzdClk&#39;s Notebook" class="md-header__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
+    <a href="../.." title="SyncrnzdClk&#39;s Notebook" class="md-header__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -102,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              gradiant descent
+              kNN
             
           </span>
         </div>
@@ -177,7 +175,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="SyncrnzdClk&#39;s Notebook" class="md-nav__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
+    <a href="../.." title="SyncrnzdClk&#39;s Notebook" class="md-nav__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -195,7 +193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -252,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../abstract_algebra/pre/" class="md-nav__link">
+      <a href="../../abstract_algebra/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -310,7 +308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../abstract_algebra/notes/preliminaries/" class="md-nav__link">
+      <a href="../../abstract_algebra/notes/preliminaries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -331,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../abstract_algebra/notes/groups/" class="md-nav__link">
+      <a href="../../abstract_algebra/notes/groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -352,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../abstract_algebra/notes/cyclic%20groups/" class="md-nav__link">
+      <a href="../../abstract_algebra/notes/cyclic%20groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,21 +383,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -413,7 +409,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             convex optimization
@@ -427,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pre/" class="md-nav__link">
+      <a href="../../convex%20optimization/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -445,21 +441,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -473,7 +467,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             notes
@@ -487,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../convex%20sets%20and%20functions/" class="md-nav__link">
+      <a href="../../convex%20optimization/notes/convex%20sets%20and%20functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../convex%20optimization%20basics/" class="md-nav__link">
+      <a href="../../convex%20optimization/notes/convex%20optimization%20basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -526,19 +520,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../convex%20optimization/notes/gradient%20descent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -547,7 +532,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -612,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../probability/pre/" class="md-nav__link">
+      <a href="../../probability/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -670,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../probability/probability%20space/" class="md-nav__link">
+      <a href="../../probability/probability%20space/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,19 +687,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -729,7 +715,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             statistical learning
@@ -743,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../statistical%20learning/pre/" class="md-nav__link">
+      <a href="../pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,19 +747,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -787,7 +775,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             notes
@@ -801,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../statistical%20learning/perceptron/" class="md-nav__link">
+      <a href="../perceptron/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -819,10 +807,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../statistical%20learning/kNN/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    kNN
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -831,6 +839,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-by-majority" class="md-nav__link">
+    <span class="md-ellipsis">
+      decision by majority
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-k" class="md-nav__link">
+    <span class="md-ellipsis">
+      about k
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -871,6 +926,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-by-majority" class="md-nav__link">
+    <span class="md-ellipsis">
+      decision by majority
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-k" class="md-nav__link">
+    <span class="md-ellipsis">
+      about k
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -884,7 +974,16 @@
                   
 
 
-<h1 id="gradient-descent">gradient descent<a class="headerlink" href="#gradient-descent" title="Permanent link">&para;</a></h1>
+<h1 id="knn">kNN<a class="headerlink" href="#knn" title="Permanent link">&para;</a></h1>
+<p>k近邻模型实际上并没有显式的学习过程，他的策略就是对输入点周围的k个最近的训练点进行分析，根据某些原则（比如多数表决）来判断输入点的标签。这样的模型看似是比较简单的，但是实际上所谓的“最近”还并没有一个确定的方式度量。比较自然的想法是<span class="arithmatex">\(L_p\)</span>范数，但是实际上，我们用来训练的数据点中可能受一些噪声的影响，导致有些情况下标签不同的点反而离得更近（在<span class="arithmatex">\(L_p\)</span>范数下的度量）。此时我们可能可以利用一些线性变换，先将数据点的位置移动到合理的位置，也就是让标签相同的数据离得更近，标签不同的数据离得更远。</p>
+<h2 id="strategy">strategy<a class="headerlink" href="#strategy" title="Permanent link">&para;</a></h2>
+<p>通过寻找目标点最近的k个点，然后利用多数表决的原则对目标点进行分类。</p>
+<h2 id="decision-by-majority">decision by majority<a class="headerlink" href="#decision-by-majority" title="Permanent link">&para;</a></h2>
+<p>这里想提一句的是多数表决原则实际上就是经验概率最大化。</p>
+<h2 id="about-k">about k<a class="headerlink" href="#about-k" title="Permanent link">&para;</a></h2>
+<p>k的值越大，决策数据集越接近全集，这时候离实例点很远的点也可能会对判断产生影响。</p>
+<p>k的值越小，决策数据集受到噪声的影响就更大，比如离目标点最近的点如果是一个噪声，那么目标点就会被错误标签。但是测试数据集如果和训练数据集很近的话，那么效果比较好。</p>
+<p>所以k的选择还是要根据实际而定。</p>
 
 
 
@@ -931,14 +1030,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
-        <script src="../../../javascripts/extra.js"></script>
+        <script src="../../javascripts/extra.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

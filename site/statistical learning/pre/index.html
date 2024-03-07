@@ -11,22 +11,22 @@
       
       
       
-        <link rel="prev" href="../convex%20optimization%20basics/">
+        <link rel="prev" href="../../probability/probability%20space/">
       
       
-        <link rel="next" href="../../../probability/pre/">
+        <link rel="next" href="../perceptron/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
-        <title>gradiant descent - SyncrnzdClk's Notebook</title>
+        <title>pre - SyncrnzdClk's Notebook</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
       
 
@@ -45,9 +45,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gradient-descent" class="md-skip">
+        <a href="#welcome-to-advanced-probability" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="SyncrnzdClk&#39;s Notebook" class="md-header__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
+    <a href="../.." title="SyncrnzdClk&#39;s Notebook" class="md-header__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              gradiant descent
+              pre
             
           </span>
         </div>
@@ -177,7 +177,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="SyncrnzdClk&#39;s Notebook" class="md-nav__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
+    <a href="../.." title="SyncrnzdClk&#39;s Notebook" class="md-nav__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -195,7 +195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -252,7 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../abstract_algebra/pre/" class="md-nav__link">
+      <a href="../../abstract_algebra/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -310,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../abstract_algebra/notes/preliminaries/" class="md-nav__link">
+      <a href="../../abstract_algebra/notes/preliminaries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -331,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../abstract_algebra/notes/groups/" class="md-nav__link">
+      <a href="../../abstract_algebra/notes/groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -352,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../abstract_algebra/notes/cyclic%20groups/" class="md-nav__link">
+      <a href="../../abstract_algebra/notes/cyclic%20groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,21 +385,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -413,7 +411,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             convex optimization
@@ -427,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pre/" class="md-nav__link">
+      <a href="../../convex%20optimization/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -445,21 +443,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -473,7 +469,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             notes
@@ -487,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../convex%20sets%20and%20functions/" class="md-nav__link">
+      <a href="../../convex%20optimization/notes/convex%20sets%20and%20functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../convex%20optimization%20basics/" class="md-nav__link">
+      <a href="../../convex%20optimization/notes/convex%20optimization%20basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -526,19 +522,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../convex%20optimization/notes/gradient%20descent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -547,7 +534,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -612,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../probability/pre/" class="md-nav__link">
+      <a href="../../probability/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -670,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../probability/probability%20space/" class="md-nav__link">
+      <a href="../../probability/probability%20space/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,19 +689,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -729,7 +717,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             statistical learning
@@ -740,10 +728,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../statistical%20learning/pre/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    pre
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -752,6 +760,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      about the notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -801,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../statistical%20learning/perceptron/" class="md-nav__link">
+      <a href="../perceptron/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,7 +859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../statistical%20learning/kNN/" class="md-nav__link">
+      <a href="../kNN/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,6 +908,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      about the notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -884,7 +938,11 @@
                   
 
 
-<h1 id="gradient-descent">gradient descent<a class="headerlink" href="#gradient-descent" title="Permanent link">&para;</a></h1>
+<h1 id="welcome-to-advanced-probability">welcome to Advanced Probability<a class="headerlink" href="#welcome-to-advanced-probability" title="Permanent link">&para;</a></h1>
+<h2 id="about-the-notes">about the notes<a class="headerlink" href="#about-the-notes" title="Permanent link">&para;</a></h2>
+<ol>
+<li>这份notes是基于浙江大学郭正初老师的《数据建模与分析》课程以及李航老师的《统计学习方法》编写的，主要是一些记录个人的理解。</li>
+</ol>
 
 
 
@@ -931,14 +989,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
-        <script src="../../../javascripts/extra.js"></script>
+        <script src="../../javascripts/extra.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
