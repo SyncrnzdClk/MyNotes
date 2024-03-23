@@ -27,6 +27,16 @@ nav:
     - notes:
       - perceptron: statistical learning/perceptron.md
       - kNN: statistical learning/kNN.md
+  - computer vision:
+    - pre: computer vision/pre.md
+    - notes: 
+      - graphics: computer vision/notes/graphics.md
+  - ads:
+    - pre: ads/pre.md
+    - notes: 
+      - leftist heap and skew heap: ads/notes/leftist heap and skew heap.md
+  - environment:
+    - various kinds of problems: environment/various kinds of problems.md 
 markdown_extensions:
   - abbr
   - pymdownx.caret

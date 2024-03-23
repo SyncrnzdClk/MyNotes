@@ -1,0 +1,3 @@
+# about the notes
+
+这份notes完全是为了记录下自己在学cv导论的时候被垃圾notes和slides困扰的地方。所以大部分都是依赖于原生的notes。
