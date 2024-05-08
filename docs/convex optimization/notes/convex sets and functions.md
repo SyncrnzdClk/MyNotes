@@ -141,4 +141,3 @@ constructing...
 ### general composition
 关于函数复合的凸性变化。这可以用对一元函数求二阶导的形式来记住。
 
-

@@ -28,6 +28,7 @@ nav:
       - perceptron: statistical learning/perceptron.md
       - kNN: statistical learning/kNN.md
       - decision tree: statistical learning/decision tree.md
+      - logistic regression: statistical learning/logistic regression.md
   - computer vision:
     - pre: computer vision/pre.md
     - notes: 
@@ -42,6 +43,10 @@ nav:
       - float: computer architecture/notes/float.md
   - environment:
     - various kinds of problems: environment/various kinds of problems.md 
+  - paper:
+    - pre: paper/pre.md
+    - notes:
+      - Classifier Calibration with ROC-Regularized Isotonic Regression: paper/notes/Classifier Calibration with ROC-Regularized Isotonic Regression.md
 markdown_extensions:
   - abbr
   - pymdownx.caret
