@@ -6,14 +6,3 @@
 ## About My Notes
 由于本人是比较喜欢国外的教材和课程，所以接触到的大部分都是英文的材料，有些地方可能翻译成中文会有点困难。
 关于这份笔记的初衷，实际上是起源于笔者学习过程中发现的一些现象。就是笔者个人学习的过程中，遇到新的知识点，常常因为无法把抽象的东西具象化，所以导致看了一大串证明最后脑子什么也没留下，或者是遇到头疼的问题苦于没有灵感。这些时候往往意味着笔者会花上很多时间去思考，等到结果出来之后又会觉得怎么这么简单。所以希望创建这么一份笔记，作为自己思路的记录，同时也希望能帮助一些同学，发现一点点的灵感。所以请**千万不要**认为这份笔记能帮你系统构建出学习的理论，其目的在于对于一些抽象的知识提供作者的一些灵感，构建出一幅图像。
-
-## Currently Updating
-Notes about the **abstract algebra** and **convex optimization**
-
-## Future Expectations
-- **Computer Organization**
-- **Advanced Data Structure & Algorithm Analysis**
-- **Database System**
-- **Discrete Math**
-- **Object-Oriented Programming(in C++)**
-- **Artificial Intelligence**

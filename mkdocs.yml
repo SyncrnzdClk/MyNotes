@@ -33,20 +33,16 @@ nav:
     - pre: computer vision/pre.md
     - notes: 
       - graphics: computer vision/notes/graphics.md
-  - ads:
-    - pre: ads/pre.md
-    - notes: 
-      - leftist heap and skew heap: ads/notes/leftist heap and skew heap.md
-  - computer architecture:
-    - pre: computer architecture/pre.md
-    - notes:
-      - float: computer architecture/notes/float.md
   - environment:
     - various kinds of problems: environment/various kinds of problems.md 
   - paper:
     - pre: paper/pre.md
     - notes:
       - Classifier Calibration with ROC-Regularized Isotonic Regression: paper/notes/Classifier Calibration with ROC-Regularized Isotonic Regression.md
+  - web:
+    - notes:
+      - latex: web/notes/some classical ways to attack a website.md
+
 markdown_extensions:
   - abbr
   - pymdownx.caret
