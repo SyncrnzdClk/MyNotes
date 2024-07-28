@@ -41,7 +41,7 @@ nav:
       - Classifier Calibration with ROC-Regularized Isotonic Regression: paper/notes/Classifier Calibration with ROC-Regularized Isotonic Regression.md
   - web:
     - notes:
-      - latex: web/notes/some classical ways to attack a website.md
+      - classical attacks: web/notes/some classical ways to attack a website.md
 
 markdown_extensions:
   - abbr
