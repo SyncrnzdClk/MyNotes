@@ -11,20 +11,22 @@
       
       
       
+        <link rel="prev" href="../../probability/probability%20space/">
       
-        <link rel="next" href="abstract_algebra/pre/">
+      
+        <link rel="next" href="../../statistical%20learning/pre/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
-        <title>SyncrnzdClk's Notebook</title>
+        <title>supervised learning formulations - SyncrnzdClk's Notebook</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
       
 
@@ -43,9 +45,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-syncrnzdclks-notebook" class="md-skip">
+        <a href="#chapter-1-supervised-learning-formulations" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="SyncrnzdClk&#39;s Notebook" class="md-header__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
+    <a href="../.." title="SyncrnzdClk&#39;s Notebook" class="md-header__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -100,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HomePage
+              supervised learning formulations
             
           </span>
         </div>
@@ -175,7 +177,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="SyncrnzdClk&#39;s Notebook" class="md-nav__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
+    <a href="../.." title="SyncrnzdClk&#39;s Notebook" class="md-nav__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -190,30 +192,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    HomePage
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -222,44 +204,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#about-me" class="md-nav__link">
-    <span class="md-ellipsis">
-      About Me
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about-my-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      About My Notes
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -306,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="abstract_algebra/pre/" class="md-nav__link">
+      <a href="../../abstract_algebra/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="abstract_algebra/notes/preliminaries/" class="md-nav__link">
+      <a href="../../abstract_algebra/notes/preliminaries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -383,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="abstract_algebra/notes/groups/" class="md-nav__link">
+      <a href="../../abstract_algebra/notes/groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -404,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="abstract_algebra/notes/cyclic%20groups/" class="md-nav__link">
+      <a href="../../abstract_algebra/notes/cyclic%20groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -475,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="convex%20optimization/pre/" class="md-nav__link">
+      <a href="../../convex%20optimization/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="convex%20optimization/notes/convex%20sets%20and%20functions/" class="md-nav__link">
+      <a href="../../convex%20optimization/notes/convex%20sets%20and%20functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -552,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="convex%20optimization/notes/convex%20optimization%20basics/" class="md-nav__link">
+      <a href="../../convex%20optimization/notes/convex%20optimization%20basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="convex%20optimization/notes/gradient%20descent/" class="md-nav__link">
+      <a href="../../convex%20optimization/notes/gradient%20descent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -644,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="probability/pre/" class="md-nav__link">
+      <a href="../../probability/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -700,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="probability/probability%20space/" class="md-nav__link">
+      <a href="../../probability/probability%20space/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -733,17 +677,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -757,7 +703,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             maching learning theory
@@ -768,17 +714,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -792,7 +740,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             notes
@@ -803,10 +751,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="maching%20learning%20theory/supervised%20learning%20formulations/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    supervised learning formulations
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -815,6 +783,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-supervised-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 supervised learning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 supervised learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-hypothesis-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1 Hypothesis class
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-empirical-risk-minimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Empirical risk minimization
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -877,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="statistical%20learning/pre/" class="md-nav__link">
+      <a href="../../statistical%20learning/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -933,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="statistical%20learning/perceptron/" class="md-nav__link">
+      <a href="../../statistical%20learning/perceptron/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -954,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="statistical%20learning/kNN/" class="md-nav__link">
+      <a href="../../statistical%20learning/kNN/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -975,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="statistical%20learning/decision%20tree/" class="md-nav__link">
+      <a href="../../statistical%20learning/decision%20tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -996,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="statistical%20learning/logistic%20regression/" class="md-nav__link">
+      <a href="../../statistical%20learning/logistic%20regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1067,7 +1088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="computer%20vision/pre/" class="md-nav__link">
+      <a href="../../computer%20vision/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1123,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="computer%20vision/notes/graphics/" class="md-nav__link">
+      <a href="../../computer%20vision/notes/graphics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1194,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="environment/various%20kinds%20of%20problems/" class="md-nav__link">
+      <a href="../../environment/various%20kinds%20of%20problems/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1257,7 +1278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="paper/pre/" class="md-nav__link">
+      <a href="../../paper/pre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1313,7 +1334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="paper/notes/Classifier%20Calibration%20with%20ROC-Regularized%20Isotonic%20Regression/" class="md-nav__link">
+      <a href="../../paper/notes/Classifier%20Calibration%20with%20ROC-Regularized%20Isotonic%20Regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1419,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="web/notes/some%20classical%20ways%20to%20attack%20a%20website/" class="md-nav__link">
+      <a href="../../web/notes/some%20classical%20ways%20to%20attack%20a%20website/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1475,18 +1496,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about-me" class="md-nav__link">
+  <a href="#11-supervised-learning" class="md-nav__link">
     <span class="md-ellipsis">
-      About Me
+      1.1 supervised learning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 supervised learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-hypothesis-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1 Hypothesis class
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#about-my-notes" class="md-nav__link">
+  <a href="#12-empirical-risk-minimization" class="md-nav__link">
     <span class="md-ellipsis">
-      About My Notes
+      1.2 Empirical risk minimization
     </span>
   </a>
   
@@ -1507,12 +1543,29 @@
                   
 
 
-<h1 id="welcome-to-syncrnzdclks-notebook">Welcome to SyncrnzdClk's NoteBook<a class="headerlink" href="#welcome-to-syncrnzdclks-notebook" title="Permanent link">&para;</a></h1>
-<h2 id="about-me">About Me<a class="headerlink" href="#about-me" title="Permanent link">&para;</a></h2>
-<p>本人是浙江大学计算机专业一个小白，目前对数学和计算机相关的知识比较感兴趣，本NoteBook会持续更新作者学习的知识（可能会非常慢，正如上文所言，本人是小白，所以学习知识可能比较慢，整理笔记的时间可能就更少了）。</p>
-<h2 id="about-my-notes">About My Notes<a class="headerlink" href="#about-my-notes" title="Permanent link">&para;</a></h2>
-<p>由于本人是比较喜欢国外的教材和课程，所以接触到的大部分都是英文的材料，有些地方可能翻译成中文会有点困难。
-关于这份笔记的初衷，实际上是起源于笔者学习过程中发现的一些现象。就是笔者个人学习的过程中，遇到新的知识点，常常因为无法把抽象的东西具象化，所以导致看了一大串证明最后脑子什么也没留下，或者是遇到头疼的问题苦于没有灵感。这些时候往往意味着笔者会花上很多时间去思考，等到结果出来之后又会觉得怎么这么简单。所以希望创建这么一份笔记，作为自己思路的记录，同时也希望能帮助一些同学，发现一点点的灵感。所以请<strong>千万不要</strong>认为这份笔记能帮你系统构建出学习的理论，其目的在于对于一些抽象的知识提供作者的一些灵感，构建出一幅图像。</p>
+<h1 id="chapter-1-supervised-learning-formulations">Chapter 1 supervised learning formulations<a class="headerlink" href="#chapter-1-supervised-learning-formulations" title="Permanent link">&para;</a></h1>
+<h2 id="11-supervised-learning">1.1 supervised learning<a class="headerlink" href="#11-supervised-learning" title="Permanent link">&para;</a></h2>
+<p>假设我们有一个样本空间 <span class="arithmatex">\(\mathcal{X}\)</span>，以及这些样本对应的标签构成的输出空间 <span class="arithmatex">\(\mathcal{Y}\)</span>，我们希望找到一个映射 <span class="arithmatex">\(h\)</span>，将这些样本正确的映射到他们的标签上，这就是监督学习的主要目的。自然地，我们要评价这个映射的好坏，于是引入了损失函数<span class="arithmatex">\(l:\mathcal{Y} \times \mathcal{Y} \to \mathbb{R}\)</span>。损失函数是针对一个映射在某一对标签上定义的，也就是说，对于一个模型（也就是我们考虑的映射），我们的的损失函数的值可以这样表示<span class="arithmatex">\(l(h(x), y)\)</span>，然后注意我们考虑的是这个模型对整体的样本的效果，所以我们需要统计损失函数在整个样本空间上的期望，我们称之为期望损失（<strong><em>expected loss / expected risk</em></strong>）：
+$$
+L(h) \triangleq\mathbb{E}_{(x,y) \sim P}[l(h(x),y)] \tag{1.1}
+$$</p>
+<h3 id="111-hypothesis-class">1.1.1 Hypothesis class<a class="headerlink" href="#111-hypothesis-class" title="Permanent link">&para;</a></h3>
+<p>现在我们考虑一个问题，在我们上面给出的期望损失计算的前提下，我们是否能够训练出一个映射<span class="arithmatex">\(h\)</span>，使得<span class="arithmatex">\(L(h)\)</span>的值为0？答案是基本不太可能，因为要能够描述一个函数，我们往往需要一些参数，一般参数越多，优化（或者说训练）这些参数计算量越大，在我们现有的计算能力内，无法去优化有近乎无穷个参数的函数，这意味着我们没法表示世界上所有的函数。所以我们把我们想要考虑的函数作为我们<strong><em>hypothesis class</em></strong>，比如 <span class="arithmatex">\(\mathcal{H} = \left\{ h : h_\theta (x) = \theta^Tx,\theta \in \mathbb{R}^d\right\}\)</span>. 相应的，我们去修改我们上面定义的期望损失如下
+$$
+E(h) \triangleq L(h) - \inf_{g\in\mathcal{H}} L(g)
+$$</p>
+<h2 id="12-empirical-risk-minimization">1.2 Empirical risk minimization<a class="headerlink" href="#12-empirical-risk-minimization" title="Permanent link">&para;</a></h2>
+<p>但是不管我们要计算的是<span class="arithmatex">\(L(h)\)</span>还是<span class="arithmatex">\(E(h)\)</span>，我们总是要能够计算<span class="arithmatex">\(\mathbb{E}_{(x,y) \sim P}[l(h(x),y)]\)</span>，但是毕竟我们现实生活中想要解决的问题对应的概率分布<span class="arithmatex">\(P\)</span>是连续的，而且常常是未知的，所以我们其实没有办法真的计算这个期望。那么学过统计学咱们就知道，我们也许可以通过抽样，得到这个值的一个良好近似。于是我们的思路就从这里出发，最直接的想法就是在我们的训练集上计算一个平均的损失，称之为<strong><em>empirical risk</em></strong>，用来替代<strong><em>expected loss</em></strong>
+$$
+\hat{L}(h_\theta) \triangleq \frac{1}{n} \Sigma_{i=1}^{n}l((h_\theta(x_i), y_i), \theta). \tag{1.2}
+$$
+那么<strong><em>empirical risk minimization</em></strong> 就是在假设类的范围内找到最优的那个<span class="arithmatex">\(\theta\)</span>，让<span class="arithmatex">\(\hat{L}(h_\theta)\)</span>的值最小。
+$$
+\theta = \arg\min_{\theta \in \Theta} \hat{L}(h_\theta)
+$$
+注意这里的<span class="arithmatex">\(\Theta\)</span>对应的就是假设类中的参数的取值集合。</p>
+<p>这当然是一个很直接的想法，但是这个想法是否合理呢？我们在学统计学的时候就已经学习过一些估计量的评价标准，比如无偏性。如果我们认为，我们在训练集中取出的样本点都是独立同分布的（<span class="arithmatex">\((x_i, y_i) \stackrel{\text{iid}}\sim P\)</span>），那么我们很容易得到这个估计是无偏的（提示：根据期望的线性以及独立同分布期望相同两个性质就能证明）</p>
+<p>如果我们要维护我们的信仰，坚信这个empirical risk是一个好的估计，无偏性当然是一个很有力的证据。但是这还不够，如果一个估计量仅仅是无偏，但是相对于真实值可能波动很大的情况下（比如真实值为0，估计量有0.5的概率是100,0.5的该率是-100），那这个估计仍然是不太好的。所以我们要寻找更加有力的论证，很自然的想法就是证明这个估计量和我们真实值的差距能够被<strong>bound</strong>在一个固定的范围内，这就是我们接下来研究的关键。</p>
 
 
 
@@ -1559,14 +1612,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
-        <script src="javascripts/extra.js"></script>
+        <script src="../../javascripts/extra.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

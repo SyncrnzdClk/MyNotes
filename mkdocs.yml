@@ -22,6 +22,9 @@ nav:
     - pre: probability/pre.md
     - notes:
       - probability space: probability/probability space.md
+  - maching learning theory:
+    - notes:
+      - supervised learning formulations: maching learning theory/supervised learning formulations.md    
   - statistical learning:
     - pre: statistical learning/pre.md
     - notes:
