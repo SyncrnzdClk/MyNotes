@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../supervised%20learning%20formulations/">
+      
+      
+        <link rel="next" href="../../statistical%20learning/pre/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Chapter 3 Concentration Inequalities - SyncrnzdClk's Notebook</title>
+        <title>concentration inequalities - SyncrnzdClk's Notebook</title>
       
     
     
@@ -98,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter 3 Concentration Inequalities
+              concentration inequalities
             
           </span>
         </div>
@@ -673,17 +677,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -697,7 +703,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             maching learning theory
@@ -708,17 +714,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -732,7 +740,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             notes
@@ -755,6 +763,244 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    concentration inequalities
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    concentration inequalities
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-the-big-o-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 The big-O notation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-chebyshevs-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Chebyshev's inequality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Chebyshev's inequality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-31-chebyshevs-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 3.1 (Chebyshev's inequality)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-hoeffdings-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Hoeffding‘s inequality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Hoeffding‘s inequality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-32-hoeffdings-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 3.2 (Hoeffding‘s inequality)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-sub-gaussian-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Sub-Gaussian random variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Sub-Gaussian random variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-33-sub-gaussian-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition 3.3 (Sub-Gaussian random variables)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remark-34" class="md-nav__link">
+    <span class="md-ellipsis">
+      remark 3.4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-35-tail-bound-for-sub-gaussian-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 3.5 (tail bound for sub-Gaussian random variables)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remark-36-tail-bound-implies-sub-gaussianity" class="md-nav__link">
+    <span class="md-ellipsis">
+      remark 3.6 (tail bound implies sub-Gaussianity)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remark-37" class="md-nav__link">
+    <span class="md-ellipsis">
+      remark 3.7
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-38-sum-of-sub-gaussian-random-variables-is-sub-gaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 3.8 (sum of sub-Gaussian random variables is sub-Gaussian)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#341-examples-of-sub-gaussian-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1 examples of sub-Gaussian random variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4.1 examples of sub-Gaussian random variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-39-rademacher-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      example 3.9 (Rademacher random variables)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-310-gaussian-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      example 3.10 (Gaussian random variables)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      more examples 待补充
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-concentrations-of-functions-of-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Concentrations of functions of random variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
