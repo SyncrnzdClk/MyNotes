@@ -1,0 +1,1799 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="SyncrnzdClk">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>Chapter 3 Concentration Inequalities - SyncrnzdClk's Notebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-3-concentration-inequalities" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SyncrnzdClk&#39;s Notebook" class="md-header__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SyncrnzdClk's Notebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 3 Concentration Inequalities
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SyncrnzdClk&#39;s Notebook" class="md-nav__button md-logo" aria-label="SyncrnzdClk's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    SyncrnzdClk's Notebook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HomePage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    abstract_algebra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            abstract_algebra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../abstract_algebra/pre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pre
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../abstract_algebra/notes/preliminaries/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    preliminaries and integers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../abstract_algebra/notes/groups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    groups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../abstract_algebra/notes/cyclic%20groups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cyclic groups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    convex optimization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            convex optimization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../convex%20optimization/pre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pre
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../convex%20optimization/notes/convex%20sets%20and%20functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    convex sets and functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../convex%20optimization/notes/convex%20optimization%20basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    convex optimization basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../convex%20optimization/notes/gradient%20descent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gradiant descent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    probability
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            probability
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../probability/pre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pre
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../probability/probability%20space/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    probability space
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    maching learning theory
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            maching learning theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supervised%20learning%20formulations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    supervised learning formulations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    statistical learning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            statistical learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistical%20learning/pre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pre
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistical%20learning/perceptron/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    perceptron
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistical%20learning/kNN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kNN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistical%20learning/decision%20tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    decision tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../statistical%20learning/logistic%20regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    logistic regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    computer vision
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            computer vision
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer%20vision/pre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pre
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer%20vision/notes/graphics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    graphics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    environment
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            environment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environment/various%20kinds%20of%20problems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    various kinds of problems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    paper
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            paper
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/pre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pre
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/notes/Classifier%20Calibration%20with%20ROC-Regularized%20Isotonic%20Regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classifier Calibration with ROC-Regularized Isotonic Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../web/notes/some%20classical%20ways%20to%20attack%20a%20website/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    classical attacks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-the-big-o-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 The big-O notation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-chebyshevs-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Chebyshev's inequality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Chebyshev's inequality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-31-chebyshevs-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 3.1 (Chebyshev's inequality)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-hoeffdings-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Hoeffding‘s inequality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Hoeffding‘s inequality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-32-hoeffdings-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 3.2 (Hoeffding‘s inequality)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-sub-gaussian-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Sub-Gaussian random variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Sub-Gaussian random variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-33-sub-gaussian-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition 3.3 (Sub-Gaussian random variables)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remark-34" class="md-nav__link">
+    <span class="md-ellipsis">
+      remark 3.4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-35-tail-bound-for-sub-gaussian-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 3.5 (tail bound for sub-Gaussian random variables)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remark-36-tail-bound-implies-sub-gaussianity" class="md-nav__link">
+    <span class="md-ellipsis">
+      remark 3.6 (tail bound implies sub-Gaussianity)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remark-37" class="md-nav__link">
+    <span class="md-ellipsis">
+      remark 3.7
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-38-sum-of-sub-gaussian-random-variables-is-sub-gaussian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theorem 3.8 (sum of sub-Gaussian random variables is sub-Gaussian)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#341-examples-of-sub-gaussian-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1 examples of sub-Gaussian random variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4.1 examples of sub-Gaussian random variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-39-rademacher-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      example 3.9 (Rademacher random variables)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-310-gaussian-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      example 3.10 (Gaussian random variables)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      more examples 待补充
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-concentrations-of-functions-of-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Concentrations of functions of random variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="chapter-3-concentration-inequalities">Chapter 3 Concentration Inequalities<a class="headerlink" href="#chapter-3-concentration-inequalities" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>这里暂时跳过了第二章内容，原因是第二章讨论的是渐进分析，但是渐进分析只能讨论收敛的趋势，真正的误差反而可能因为常数项而变得很大，所以感觉不是一个特别有效的分析。后续有时间的话就补上。（其实还有个原因是渐进分析中用到的符号非常长而且难读，大家都会讨厌的，一上来就这么难绷的话，肯定就不继续看下去了，所以先不写）</p>
+</blockquote>
+<p>我们在Chapter 1 中说到，我们当前的目标是证明我们的empirical risk 是 expected risk的一个良好近似。但是这一章内容不直接继续论证这一部分，而是先讨论一些后续论证需要用到的重要工具。</p>
+<h2 id="31-the-big-o-notation">3.1 The big-O notation<a class="headerlink" href="#31-the-big-o-notation" title="Permanent link">&para;</a></h2>
+<p>为了后续的分析方便，我们需要给出大<span class="arithmatex">\(O\)</span>记号的定义，为了让定义描述更加精确，我直接套用原课程notes中给出的定义。这里其实不用急着看，如果觉得记号的定义让人很头疼，可以先跳过，往下看精彩部分，我特意省略了一些正文中用到记号的部分。</p>
+<blockquote>
+<p>every occurrence of <span class="arithmatex">\(O(x)\)</span> is a placeholder for some function <span class="arithmatex">\(f(x)\)</span> such that for every <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(|f(x)|≤Cx\)</span> for some absolute/universal constant <span class="arithmatex">\(C\)</span>. In other words, when <span class="arithmatex">\(O(n_1),...,O(n_k)\)</span> occur in a statement, it means that there exist absolute constants <span class="arithmatex">\(C_1,...,C_k &gt; 0\)</span> and functions <span class="arithmatex">\(f_1,...,f_k\)</span> satisfying <span class="arithmatex">\(|f_i(x)|≤C_ix\)</span> for all <span class="arithmatex">\(x\)</span>, such that after replacing each occurrence <span class="arithmatex">\(O(n_i)\)</span> by <span class="arithmatex">\(f_i(n_i)\)</span>, the statement is true. The difference from traditional “big-O” notation is that we do not need to send <span class="arithmatex">\(n → ∞\)</span> in order to define “big-O”. In nearly all cases, big-O notation is used to define an upper bound; then, the bound is identical if we simply substitute <span class="arithmatex">\(Cx\)</span> in place of <span class="arithmatex">\(O(x)\)</span>.</p>
+<p>Note that the <span class="arithmatex">\(x\)</span> in our definition of big-O is a surrogate for an arbitrary variable. For instance, later on in this chapter, we will encounter the term <span class="arithmatex">\(O(\sigma\sqrt{\log n})\)</span>. The definition above, applied with <span class="arithmatex">\(x = \sigma\sqrt{\log n}\)</span>, yields the following conclusion: <span class="arithmatex">\(O(σ\sqrt{\log n}) = f(σ\sqrt{\log n})\)</span> for some function <span class="arithmatex">\(f\)</span> and constant <span class="arithmatex">\(C\)</span> such that <span class="arithmatex">\(|f(σ\sqrt{\log n})|≤Cσ\sqrt{\log n}\)</span> for all values that <span class="arithmatex">\(σ\sqrt{\log n}\)</span> can take. Lastly, for any <span class="arithmatex">\(a,b ≥ 0\)</span>, we will let <span class="arithmatex">\(a\lesssim b\)</span> mean that there is some absolute constant <span class="arithmatex">\(c &gt; 0\)</span> such that <span class="arithmatex">\(a ≤cb\)</span>.</p>
+</blockquote>
+<p>一个关键的地方在于这个big-O notation不是要求<span class="arithmatex">\(x\)</span>趋向于正无穷，而是要求对任意<span class="arithmatex">\(x\)</span>都能bound住，所以相对于传统的big-O notation 是一个条件更加严格的记号。</p>
+<h2 id="32-chebyshevs-inequality">3.2 Chebyshev's inequality<a class="headerlink" href="#32-chebyshevs-inequality" title="Permanent link">&para;</a></h2>
+<h3 id="theorem-31-chebyshevs-inequality">Theorem 3.1 (Chebyshev's inequality)<a class="headerlink" href="#theorem-31-chebyshevs-inequality" title="Permanent link">&para;</a></h3>
+<p>假设自变量<span class="arithmatex">\(Z\)</span>是一个具备有限期望和方差的随机变量，那么
+$$
+\Pr[|Z-\mathbb{E}[Z]| \ge t] \le \frac{Var(Z)}{t^2}, \forall t \gt 0. \tag{3.1}
+$$
+这个定理说明了，我们的随机变量偏离均值的概率随着偏离程度增大而减小，并且衰减的程度是<span class="arithmatex">\(1/t^2\)</span>，看起来不错，这意味着我们在某种程度上（某个概率的意义下）能保证我们的估计量离他的均值不远。但是遗憾的是这远远不够，这个衰减的速度还是太慢了，但至少我们朝我们的主题——<strong><em>Concentration</em></strong>迈进了一步。</p>
+<h2 id="33-hoeffdings-inequality">3.3 Hoeffding‘s inequality<a class="headerlink" href="#33-hoeffdings-inequality" title="Permanent link">&para;</a></h2>
+<h3 id="theorem-32-hoeffdings-inequality">Theorem 3.2 (Hoeffding‘s inequality)<a class="headerlink" href="#theorem-32-hoeffdings-inequality" title="Permanent link">&para;</a></h3>
+<p>我们假设有一组实值的独立同分布的随机变量<span class="arithmatex">\(X_1, X_2, ... X_n\)</span> ，并且有很高的概率保证<span class="arithmatex">\(a_i \le X_i \le b_i\)</span>，令<span class="arithmatex">\(\mu = \mathbb{E}[\bar{X}]\)</span> 则有
+$$
+\Pr[|\bar{X} - \mu| \le \varepsilon] \ge 1-2\exp(\frac{-2n<sup>2\varepsilon</sup>2}{\Sigma_{i=1}^{n}(b_i - a_i)^2}) \tag{3.2}
+$$
+然后我们在独立性的假设下，可以证明出
+$$
+Var(\bar{X}) = \frac{1}{n<sup n="n">2}\Sigma_{i=1}</sup>} Var(X_i) \le \frac{1}{n^2} \Sigma_{i=1<sup>{n}(b_i-a_i)</sup>2 \tag{3.3}
+$$
+那么其实我们把<span class="arithmatex">\((3.2)\)</span>中的分母换成<span class="arithmatex">\(\bar{X}\)</span>的方差是没问题的，不等式仍然会成立。不过我们这边将原来的这个分母看成是方差的一个代理，这样让不等式更紧一些。也就是说我们令<span class="arithmatex">\(\sigma^{2}=\frac{1}{n^{2}} \sum_{i=1}^{n}\left(b_{i}-a_{i}\right)^{2}\)</span>，然后令<span class="arithmatex">\(\varepsilon=O(\sigma\sqrt{\log n})=\sigma\sqrt{c\log n}\)</span>，代入我们的<span class="arithmatex">\((3.2)\)</span>，得到如下结果：
+$$
+\begin{align}
+\operatorname*{Pr}\left[|\bar{X}-\mu|\leq\varepsilon\right]&amp; \geq1-2\exp\left(\frac{-2\varepsilon<sup>2}{\sigma</sup>2}\right) &amp; \tag{3.4} \
+&amp;=1-2\exp(-2c\log n)&amp; \tag{3.5} \
+&amp;=1-2n^{-2c}&amp; \tag{3.6} 
+\end{align}
+$$</p>
+<p>观察这个式子，我们发现，估计量离均值的距离<span class="arithmatex">\(\varepsilon\)</span>随着<span class="arithmatex">\(n,c\)</span>增大的时候，概率衰减会很快。并且相对于之前的切比雪夫不等式，我们这里考虑的是一组独立同分布的随机变量，而且有个关键条件<strong>很高的概率保证</strong><span class="arithmatex">\(a_i \le X_i \le b_i\)</span>，事实上这个条件不容易做到，接下来我们的目标就是在抛弃这个条件的基础上，尝试找到更广泛的分布，保证他们也具备样本均值不会偏离期望太远的性质。</p>
+<h2 id="34-sub-gaussian-random-variables">3.4 Sub-Gaussian random variables<a class="headerlink" href="#34-sub-gaussian-random-variables" title="Permanent link">&para;</a></h2>
+<h3 id="definition-33-sub-gaussian-random-variables">Definition 3.3 (Sub-Gaussian random variables)<a class="headerlink" href="#definition-33-sub-gaussian-random-variables" title="Permanent link">&para;</a></h3>
+<p>一个随机变量<span class="arithmatex">\(X\)</span>，具备有限的均值<span class="arithmatex">\(\mu\)</span>，如果满足下面的条件，就说明是<span class="arithmatex">\(\sigma\)</span>-sub-gaussian的，并且我们说他有方差代理<span class="arithmatex">\(\sigma^2\)</span>（就是用来代替方差的啦）。
+$$
+\mathbb{E}\left[e^{\lambda(X-\mu)}\right]\leq e<sup>{\sigma</sup>2\lambda^2/2},\quad\forall\lambda\in\mathbb{R}. \tag{3.7}
+$$</p>
+<h3 id="remark-34">remark 3.4<a class="headerlink" href="#remark-34" title="Permanent link">&para;</a></h3>
+<p>式<span class="arithmatex">\((3.7)\)</span>实际上是一个比较严格的条件，严格就严格在，他要求随机变量<span class="arithmatex">\(X\)</span>的任意阶矩都存在且不会随阶数增长的很快。为什么这么说呢？因为我们注意到等式的左边其实类似随机变量的矩生成函数，不妨让<span class="arithmatex">\(\mu\)</span>为<span class="arithmatex">\(0\)</span>，那么我们对期望内部进行泰勒展开，我们就有
+$$
+\mathbb{E}[\exp(\lambda X)]=\mathbb{E}\left[\sum_{k=0}^\infty\frac{(\lambda X)<sup>k}{k!}\right]=\sum_{k=0}</sup>\infty\frac{\lambda<sup>k}{k!}\mathbb{E}[X</sup>k]. \tag{3.8}
+$$
+不难观察到，随着阶数<span class="arithmatex">\(k\)</span>增大，随机变量的矩的增长速度要比<span class="arithmatex">\(k!/\lambda^k\)</span>更加缓慢，才能保证每一项都是有限的，这是这个级数收敛的必要条件。</p>
+<p>符合sub-gaussian分布的随机变量有非常不错的性质，我们可以轻松证明他们偏离自己的均值的概率随着偏离的距离增大而呈现指数级别的下降！这正如我们之前在Hoeffding’s inequality中看到的那样，并且我们这次不需要保证<span class="arithmatex">\(a_i\le X_i \le b_i\)</span>.</p>
+<h3 id="theorem-35-tail-bound-for-sub-gaussian-random-variables">Theorem 3.5 (tail bound for sub-Gaussian random variables)<a class="headerlink" href="#theorem-35-tail-bound-for-sub-gaussian-random-variables" title="Permanent link">&para;</a></h3>
+<p>如果一个随机变量<span class="arithmatex">\(X\)</span>具备有限的均值<span class="arithmatex">\(\mu\)</span>是<span class="arithmatex">\(\sigma-sub-Gaussian\)</span>的，那么就有如下不等式
+$$
+\Pr[|X-\mu|\geq t]\leq2\exp\left(-\frac{t<sup>2}{2\sigma</sup>2}\right),\quad\forall t\in\mathbb{R}. \tag{3.9}
+$$
+这里我们给出相应的证明</p>
+<p>固定<span class="arithmatex">\(t &gt; 0\)</span>，<span class="arithmatex">\(\forall \lambda &gt; 0\)</span>
+$$
+\begin{align}
+\mathrm{Pr}[X-\mu\geq t]&amp; =\Pr[\exp(\lambda(X-\mu))\geq\exp(\lambda t)] \tag{3.10}\
+&amp;\leq\exp(-\lambda t)\operatorname{E}[\exp(\lambda(X-\mu))]&amp;&amp; \begin{aligned}(\text{by Markov's inequality})\end{aligned} \tag{3.11}\
+&amp;\begin{aligned}\leq\exp(-\lambda t)\exp(\sigma<sup>2\lambda</sup>2/2)\end{aligned}&amp;&amp; (\mathrm{by} (3.7)) \tag{3.12}\
+&amp;=\exp(-\lambda t+\sigma<sup 2="2">{2}\lambda</sup>
+\end{align}
+$$
+最后一步放缩就变得很自然了，因为这个}/2). \tag{3.13<span class="arithmatex">\(\lambda\)</span>是任意取的正数，所以不妨把<span class="arithmatex">\((3.13)\)</span>指数函数内部的式子看成一个二次函数，然后就很容易解得一个最大值作为上界。具体如下
+$$
+\Pr[X-\mu \ge t] \le \exp{(-\frac{t<sup>2}{2\sigma</sup>2})} \tag{3.14}
+$$
+现在我们的证明完成了一半，因为我们只处理了<span class="arithmatex">\(X - \mu \ge t\)</span> 的情况，但是目标是<span class="arithmatex">\(|X - \mu| \ge t\)</span>. 这时候我们使用对称性，对随机变量<span class="arithmatex">\(-X\)</span>用相同方法处理一遍（这里要把<span class="arithmatex">\(t\)</span>代入为<span class="arithmatex">\(-t\)</span>, 仍然令<span class="arithmatex">\(t &gt; 0\)</span>），就得到了
+$$
+\Pr[X-\mu \le -t] \le \exp{(-\frac{t<sup>2}{2\sigma</sup>2})} \tag{3.15}
+$$
+然后我们使用一下概率论中的<strong><em>union bound</em></strong>就很快得到了结果
+$$
+\Pr[|X-\mu|\geq t]\le\Pr[X-\mu\geq t]+\Pr[X-\mu\leq-t]\leq2\exp\left(-\frac{t<sup>2}{2\sigma</sup>2}\right). \tag{3.16}
+$$</p>
+<blockquote>
+<p><strong><em>supplement</em></strong> - union bound
+$$
+\mathbb{P}\left(\bigcup_{i=1}^\infty A_i\right)\leq\sum_{i=1}^\infty\mathbb{P}(A_i).
+$$
+在这些事件<span class="arithmatex">\(\left\{A_i\right\}\)</span>是概率空间中互不相交的子集，那么刚好可以取到等号，所以<span class="arithmatex">\((3.16)\)</span>中的第一个不等号可以改为等号，但是谁在意呢哈哈哈</p>
+</blockquote>
+<h3 id="remark-36-tail-bound-implies-sub-gaussianity">remark 3.6 (tail bound implies sub-Gaussianity)<a class="headerlink" href="#remark-36-tail-bound-implies-sub-gaussianity" title="Permanent link">&para;</a></h3>
+<p>我们刚刚得到的是从sub-Gaussian性质推导出<span class="arithmatex">\((3.9)\)</span>，但是实际上，如果一个随机变量满足式<span class="arithmatex">\((3.9)\)</span>，就意味着他是<span class="arithmatex">\(\sigma-sub-Gaussian\)</span>的，遗憾的是这个证明比较复杂，这里就不阐述了。</p>
+<h3 id="remark-37">remark 3.7<a class="headerlink" href="#remark-37" title="Permanent link">&para;</a></h3>
+<p>这里本来有些对矩生成函数的坏话，但是我先不说，后面如果我认为有必要的话还是会回来补充</p>
+<h3 id="theorem-38-sum-of-sub-gaussian-random-variables-is-sub-gaussian">Theorem 3.8 (sum of sub-Gaussian random variables is sub-Gaussian)<a class="headerlink" href="#theorem-38-sum-of-sub-gaussian-random-variables-is-sub-gaussian" title="Permanent link">&para;</a></h3>
+<p>我们先阐述这个定理：如果<span class="arithmatex">\(\left\{X_i\right\}\)</span>是具有方差代理<span class="arithmatex">\(\left\{\sigma_i^2\right\}\)</span>的sub-gaussian 性质的随机变量集合，那么这组随机变量的和（记为<span class="arithmatex">\(Z\)</span>）也是sub-Gaussian的，并且有方差代理<span class="arithmatex">\(\Sigma_{i=1}^{n}\sigma_i^2\)</span>. </p>
+<p>为什么需要这个定理？因为我们后续的内容要做的其实是统计，这意味这我们的抽取的样本不止一个，所以我们需要有能够帮我们分析整租样本的定理。有了这个定理之后，我们应用一下刚刚学到的<strong><em>theorem 3.5</em></strong>，就不难得到
+$$
+\Pr[|Z-\mathbb{E}[Z]|\geq t]\leq2\exp\left(-\frac{t<sup>2}{2\sum_{i=1}</sup>n\sigma_i^2}\right) \tag{3.17}
+$$
+下面我们给出<strong><em>theorem 3.8</em></strong>的证明
+$$
+\begin{align}
+\mathbb{E}\left[\operatorname{exp}\left{\lambda(Z-\mathbb{E}[Z])\right}\right]&amp; =\mathbb{E}\left[\prod_{i=1}^n\exp\left{\lambda(X_i-\mathbb{E}[X_i])\right}\right] \tag{3.18}\ 
+&amp;=\prod_{i=1}^n\mathbb{E}\left[\exp\left{\lambda(X_i-\mathbb{E}[X_i])\right}\right] &amp;&amp;\begin{aligned}\text{(by independency)}\end{aligned}\tag{3.19}\
+&amp;\leq\prod_{i=1}<sup>n\exp\left(\frac{\lambda</sup>2\sigma_i^2}2\right) \tag{3.20}\
+&amp;=\exp\left(\frac{\lambda<sup>2\sum_{i=1}</sup>n\sigma_i^2}{2}\right) \tag{3.21}
+\end{align}
+$$</p>
+<h3 id="341-examples-of-sub-gaussian-random-variables">3.4.1 examples of sub-Gaussian random variables<a class="headerlink" href="#341-examples-of-sub-gaussian-random-variables" title="Permanent link">&para;</a></h3>
+<p>这里我们尝试用一些例子辅助理解sub-Gaussian的魅力，并且这些例子不是随意选取的，后续的内容也会使用到这类随机变量。</p>
+<h4 id="example-39-rademacher-random-variables">example 3.9 (Rademacher random variables)<a class="headerlink" href="#example-39-rademacher-random-variables" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>非常重要的一类随机变量！后续会讲解Rademacher complexity，是当前广泛用来描述机器学习算法复杂度的complexity measure，其优势就在于把原问题中的随机变量转化为了简单的Rademacher random variables来处理。</p>
+</blockquote>
+<p>首先我们给出Rademacher随机变量的定义：一个Rademacher随机变量<span class="arithmatex">\(\epsilon\)</span>有0.5的概率取值为1,0,5的概率取值为-1。</p>
+<p>我们可以证明<span class="arithmatex">\(\epsilon\)</span>是<span class="arithmatex">\(1-sub-Gaussian\)</span>的。
+$$
+\begin{align}
+\mathbb{E}[\operatorname{exp}(\lambda\epsilon)]&amp; =\frac12\left{\exp(-\lambda)+\exp(\lambda)\right} \tag{3.22}\
+&amp;=\frac12\left{\sum_{k=0}<sup>\infty\frac{(-\lambda)</sup>k}{k!}+\sum_{k=0}<sup>\infty\frac{\lambda</sup>k}{k!}\right} \tag{3.23}\
+&amp;=\sum_{k=0}<sup 2k="2k">\infty\frac{\lambda</sup>k, (-\lambda)}}{(2k)!}&amp;&amp; (\text{for odd <sup>k+\lambda</sup>k=0) \tag{3.24}\
+&amp;\leq1+\sum_{k=1}<sup>\infty\frac{\left(\lambda</sup>2\right)<sup>k}{2</sup>kk!}&amp;&amp; \begin{aligned}(2^kk!\text{是}(2k)!\text{的偶数项乘积})\end{aligned} \tag{3.25}\
+&amp;=\exp(\lambda^2/2) \tag{3.26}
+\end{align}
+$$</p>
+<h4 id="example-310-gaussian-random-variables">example 3.10 (Gaussian random variables)<a class="headerlink" href="#example-310-gaussian-random-variables" title="Permanent link">&para;</a></h4>
+<p>如果<span class="arithmatex">\(X\)</span> 是具备方差<span class="arithmatex">\(\sigma^2\)</span>的高斯型随机变量，那么<span class="arithmatex">\(X\)</span>天然满足<span class="arithmatex">\((3.9)\)</span>中的取等条件，并且他的方差代理和方差相同。这也许是我们把这类随机变量称为sub-Gaussian的原因吧。</p>
+<p>这个太容易证明了，写出高斯分布的定义就直接证完了，这里就不赘述。</p>
+<h4 id="more-examples">more examples 待补充<a class="headerlink" href="#more-examples" title="Permanent link">&para;</a></h4>
+<h3 id="35-concentrations-of-functions-of-random-variables">3.5 Concentrations of functions of random variables<a class="headerlink" href="#35-concentrations-of-functions-of-random-variables" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>接下来的内容看起来会稍微有点棘手（指符号看起来比较高级），但是notes中也写的十分详尽，所以放轻松，光是只追求看懂的话还是和上面的内容一样简单。</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
