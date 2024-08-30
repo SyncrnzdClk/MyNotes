@@ -24,7 +24,8 @@ nav:
       - probability space: probability/probability space.md
   - maching learning theory:
     - notes:
-      - supervised learning formulations: maching learning theory/supervised learning formulations.md    
+      - supervised learning formulations: maching learning theory/supervised learning formulations.md
+      - concentration inequalities: maching learning theory/Concentration Inequalities.md    
   - statistical learning:
     - pre: statistical learning/pre.md
     - notes:
