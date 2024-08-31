@@ -39,6 +39,7 @@ nav:
       - graphics: computer vision/notes/graphics.md
   - environment:
     - various kinds of problems: environment/various kinds of problems.md 
+    - 服务器上配置miniconda: environment/服务器上配置miniconda.md
   - paper:
     - pre: paper/pre.md
     - notes:
