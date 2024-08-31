@@ -84,6 +84,8 @@ $$
 
 这里我们给出相应的证明
 
+#### proof
+
 固定 $t > 0$ ， $\forall \lambda > 0$
 
 $$
@@ -117,7 +119,7 @@ $$
 >$$
 >\mathbb{P}\left(\bigcup_{i=1}^\infty A_i\right)\leq\sum_{i=1}^\infty\mathbb{P}(A_i).
 >$$
->在这些事件 $\left\{A_i\right\}$ 是概率空间中互不相交的子集，那么刚好可以取到等号，所以 $(3.16)$ 中的第一个不等号可以改为等号，但是谁在意呢哈哈哈
+>如果这些事件 $\left\{A_i\right\}$ 是概率空间中互不相交的子集，那么刚好可以取到等号，所以 $(3.16)$ 中的第一个不等号可以改为等号，但是谁在意呢哈哈哈
 
 ### remark 3.6 (tail bound implies sub-Gaussianity)
 
@@ -138,6 +140,8 @@ $$
 $$
 
 下面我们给出***theorem 3.8***的证明
+
+#### proof
 
 $$
 \begin{align}
@@ -183,6 +187,54 @@ $$
 ### 3.5 Concentrations of functions of random variables
 
 > 接下来的内容看起来会稍微有点棘手（指符号看起来比较高级），但是notes中也写的十分详尽，所以放轻松，光是只追求看懂的话还是和上面的内容一样简单。
+
+我们上面阐述的主要是一组样本的均值会被控制在他们的期望附近，现在要考虑的问题则是，对于一组随机变量 $\left\{X_i\right\}$ 以及某个映射 $f$， $f(X_1, X_2, ..., X_n)$ 是否会被控制在均值 $\mathbb{E}[f(X_1, X_2, ..., X_n)]$ 的附近呢？对于一些性质不那么变态的映射来说，的确是这样的。
+
+### Theorem 3.11 (McDiarmid's inequality)
+
+假设我们的函数 $f: \mathbb{R}^n \rightarrow \mathbb{R}$ 遵循下面的***bounded difference condition***：
+
+存在某些常数 $c_1, c_2, ..., c_n \in \mathbb{R}$ 使得对于任意的实数 $x_1, x_2, ..., x_n$ 以及某个 $x_i'$，有
+$$
+|f(x_1,\ldots,x_n)-f(x_1,\ldots,x_{i-1},x_i',x_{i+1},\ldots,x_n)|\leq c_i. \tag{3.27}
+$$
+（尝试解释一下这个定义，也就是说，这个多元函数，在其他变量是固定的任意数时，如果只有一个变量发生了变化，那么函数值的整体变化会被一个相应的常数控制住。或者你可以想象，当我们固定了其他变量的时候，这个函数就变成了一个一维的函数，那么我们相应的作为bound的常数项一定大于等于这个一维函数的最大值和最小值之差（必要条件，因为其他变量可能被固定在任何位置）。总体来看，这个函数就是很乖的一个函数，在任何地方都不会过分敏感地增长，我们不妨叫他乖宝宝函数（？））
+
+满足上面这个约束的话，我们就有这个性质：对任意 $X_1, X_2, ..., X_n$ 有
+$$
+\Pr\left[f(X_1,\ldots,X_n)-\mathbb{E}[f(X_1,\ldots,X_n)]\geq t\right]\leq\exp\left(-\frac{2t^2}{\sum_{i=1}^nc_i^2}\right). \tag{3.28}
+$$
+也就是说，$f(X_1, X_2, ... X_n)$ 是 $O(\sqrt{\Sigma_{i=1}^nc_i^2}) - sub -Gaussian$ 的
+
+### remark 3.12 
+
+回忆一下我们之前提到的***Hoeffding's inequality***，细心的朋友会发现，***Hoeffding's inequality***算是***Theorem 3.11***的一个特化，要求了 $x_i$ 的范围，以及把映射代入为了求和函数
+
+
+
+下面我们给出***Theorem 3.11***的证明，这是概率论中富有技巧性的有趣的那种类型的证明
+
+#### proof
+
+我们首先定义
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
