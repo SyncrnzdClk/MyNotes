@@ -180,6 +180,12 @@ $$
 
 这个太容易证明了，写出高斯分布的定义就直接证完了，这里就不赘述。
 
+#### example 3.11 (Bounded random variables)
+
+若 $X$ 是一个随机变量，并且基本能确定 $a_1 \le X_i \ge b_i$ ，那么就有
+$$
+\mathbb{E}\left[e^{\lambda(X-\mathbb{E}[X])}\right]\leq\exp\left[\frac{\lambda^2(b-a)^2}8\right]
+$$
 
 
 #### more examples 待补充
@@ -190,7 +196,7 @@ $$
 
 我们上面阐述的主要是一组样本的均值会被控制在他们的期望附近，现在要考虑的问题则是，对于一组随机变量 $\left\{X_i\right\}$ 以及某个映射 $f$， $f(X_1, X_2, ..., X_n)$ 是否会被控制在均值 $\mathbb{E}[f(X_1, X_2, ..., X_n)]$ 的附近呢？对于一些性质不那么变态的映射来说，的确是这样的。
 
-### Theorem 3.11 (McDiarmid's inequality)
+### Theorem 3.12 (McDiarmid's inequality)
 
 假设我们的函数 $f: \mathbb{R}^n \rightarrow \mathbb{R}$ 遵循下面的***bounded difference condition***：
 
@@ -206,17 +212,173 @@ $$
 $$
 也就是说，$f(X_1, X_2, ... X_n)$ 是 $O(\sqrt{\Sigma_{i=1}^nc_i^2}) - sub -Gaussian$ 的
 
-### remark 3.12 
+### remark 3.13 
 
 回忆一下我们之前提到的***Hoeffding's inequality***，细心的朋友会发现，***Hoeffding's inequality***算是***Theorem 3.11***的一个特化，要求了 $x_i$ 的范围，以及把映射代入为了求和函数
 
 
 
-下面我们给出***Theorem 3.11***的证明，这是概率论中富有技巧性的有趣的那种类型的证明
+下面我们给出***Theorem 3.12***的证明，这是概率论中富有技巧性的有趣的那种类型的证明
 
 #### proof
 
-我们首先定义
+对于这种需要魔法的证明，我认为我的水平没法解释一个一般性的思路，但是能尽量把证明过程讲清楚。
+
+回忆一下sub-gaussian 的定义的形式 $(3.7)$ ，并且我们目标的方差代理是有求和的形式，这时候我们使用一下概率论中的一些魔法，使得我们的 $f(X_1,\ldots,X_n)-\mathbb{E}[f(X_1,\ldots,X_n)]$ 也能有求和的形式，我们定义下面这些式子。
+$$
+\begin{aligned}
+&Z_{0} =\mathbb{E}\left[f(X_1,\ldots,X_n)\right] \\
+&Z_{1} =\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1\right] \\
+&Z_{i} =\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_i\right] \\
+&\ldots \\
+&Z_{n} =f(X_1,\ldots,X_n) 
+\end{aligned}
+$$
+首先我们可以通过全期望公式，证明所有 $Z_i$ 的期望都等于 $Z_0$ 的期望。
+$$
+\begin{aligned}
+\mathbb{E}[Z_{i}]& =\mathbb{E}\left[\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_i\right]\right] \\
+&=\mathbb{E}[f(X_1,\ldots,X_n)] \\
+&=Z_{0}
+\end{aligned}
+$$
+然后迅速得到推论， $D_i = Z_i - Z_{i-1}, \mathbb{E}[D_i] = 0$  .
+
+然后我们把我们的目标 $Z_n - Z_0$ 就能成求和形式了，也就是说
+$$
+\begin{aligned}
+Z_{n}-Z_{0}& =(Z_n-Z_{n-1})+(Z_{n-1}-Z_{n-2})+\cdots+(Z_1-Z_0) \\
+&=\sum_{i=1}^nD_i
+\end{aligned}
+$$
+如果每个 $D_i$ 都能被bounded的话，我们就基本能得到我们的结论了。
+
+接下来我们定义 $D_i$ 的上下界，尽管此时你可能会说，凭什么 $D_i$ 不会到正无穷或者负无穷去？确实，但是我们 ***theorem 3.12*** 的前置条件就能保证 $D_i$ 的上下界之差不会到正无穷，这间接保证了上下界不会是正无穷或负无穷，看接下来的证明就明白了
+$$
+\begin{aligned}A_i&=\inf_x\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_{i-1},X_i=x\right]-\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_{i-1}\right]\\B_i&=\sup_x\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_{i=1},X_i=x\right]-\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_{i-1}\right]\end{aligned}
+$$
+（注意这里的 $x$ 控制的是 $X_i$ 的取值）
+
+因为所有的 $X_i$ 都是相互独立的，所以我们对期望的计算可以展开成下面的积分形式（自变量相互独立保证了 $dP$ 中不用写成条件概率的形式。
+$$
+\begin{aligned}
+B_{i}-A_{i} &= \sup_x\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_{i-1},X_i=x\right]-\inf_x\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_{i-1},X_i=x\right]
+\\ &= \sup_{x,x^{\prime}}\int\left(f(x_1,\ldots,x_{i-1},x,x_{i+1},\ldots,x_n)-f(x_1,\ldots,x_{i-1},x^{\prime},x_{i+1},\ldots,x_n)\right)dP(x_{i+1},\ldots,x_n)
+\\ &\leq\sup_{x_{1: i-1}} \sup_{x,x^{\prime}}\int\left(f(x_1,\ldots,x_{i-1},x,x_{i+1},\ldots,x_n)-f(x_1,\ldots,x_{i-1},x^{\prime},x_{i+1},\ldots,x_n)\right)dP(x_{i+1},\ldots,x_n) \\
+&\leq c_{i}
+\end{aligned}
+$$
+
+然后我们回忆一下 ***example 3.11*** ，发现 $A_i \le D_i \le B_i$，于是我们可以有
+$$
+\mathbb{E}\left[e^{\lambda(D_i-\mathbb{E}[D_i])}\right]\leq\exp\left[\frac{\lambda^2c_i^2}8\right]
+$$
+不过我们的目标是
+$$
+\mathbb{E}\left[e^{\lambda(\Sigma_i^nD_i-\mathbb{E}[\Sigma_i^nD_i])}\right]
+$$
+这时候我们又要用到全期望公式了，帮助我们把目标式子展开成多个***example 3.11*** 的乘积
+$$
+\begin{aligned}
+\mathbb{E}\left[ e^{\lambda(Z_{n}-Z_{0})}\right] & =\mathbb{E}\left[ e^{\lambda\sum_{i=1}^{n}(Z_{i}-Z_{i-1})}\right]  \\
+&= \mathbb{E}_{X_1,...X_{n-1}}\left[\mathbb{E}_{X_n}\left[e^{\lambda(Z_n-Z_{n-1})}e^{\lambda\sum_{i=1}^{n-1}(Z_i-Z_{i-1})}\bigg|X_1,\ldots,X_{n-1}\right]\right]\\
+&=\mathbb{E}_{X_1,...X_{n-1}}\left[\mathbb{E}_{X_n}\left[e^{\lambda(Z_n-Z_{n-1})}\bigg|X_1,\ldots,X_{n-1}\right]e^{\lambda\sum_{i=1}^{n-1}(Z_i-Z_{i-1})}\right] \\
+&\leq e^{\lambda^{2}c_{n}^{2}/8}\mathbb{E}\left[e^{\lambda\sum_{i=1}^{n-1}(Z_{i}-Z_{i-1})}\right] \\
+&\ldots \\
+&\leq e^{\lambda^2(\sum_{i=1}^nc_i^2)/8}
+\end{aligned}
+$$
+这样就完成了证明！
+
+### 3.5.1 Bounds for Gaussian random variables
+
+我们刚刚阐述的这个定理，实际上条件 $(3.27)$ 还是相对严苛了，相对来说基本只有那些有界的随机变量或者有界函数才能实现，对于无界的函数和随机变量，我们也能给出一个concentration的结论，但是这里只针对标准的高斯型随机变量。
+
+#### theorem 3.14
+
+对于光滑的函数 $f: \mathbb{R}^n \rightarrow \mathbb{R}$ ，如果 $X_1, ..., X_n$ 都是独立从 $\mathcal{N}(0,1)$ 中采样得到的。那么就有
+$$
+\operatorname{Var}(f(X_1,\ldots,X_n))\leq\mathbb{E}\left[\|\nabla f(X_1,\ldots,X_n)\|_2^2\right] \tag{3.29}
+$$
+更进一步，如果 $f$ 是 $L-lipschitz$ 的（在 $l_2$ 范数的意义下），也就是说， $\forall x, y$
+$$
+|f(x)-f(y)|\leq L\|x-y\|_2 \tag{3.30}
+$$
+那么对满足上面提到的两个条件的随机变量以及函数，我们有
+
+#### theorem 3.15
+
+$$
+\forall t \in \mathbb{R^+},\Pr[|f(X)-\mathbb{E}[f(X)]|\geq t]\leq2\exp\left(-\frac{t^2}{2L^2}\right)  \tag{3.31}
+$$
+
+这个定理告诉我们一个事儿，对于一组独立同分布的符合标准的独立同分布的随机变量呢，如果对他们施加一个 $L-lipschitz$ 的变换，那么我们将得到一个 $L-sub-Gaussian$ 的随机变量。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
