@@ -183,6 +183,7 @@ $$
 #### example 3.11 (Bounded random variables)
 
 若 $X$ 是一个随机变量，并且基本能确定 $a_1 \le X_i \ge b_i$ ，那么就有
+
 $$
 \mathbb{E}\left[e^{\lambda(X-\mathbb{E}[X])}\right]\leq\exp\left[\frac{\lambda^2(b-a)^2}8\right]
 $$
@@ -201,15 +202,19 @@ $$
 假设我们的函数 $f: \mathbb{R}^n \rightarrow \mathbb{R}$ 遵循下面的***bounded difference condition***：
 
 存在某些常数 $c_1, c_2, ..., c_n \in \mathbb{R}$ 使得对于任意的实数 $x_1, x_2, ..., x_n$ 以及某个 $x_i'$，有
+
 $$
 |f(x_1,\ldots,x_n)-f(x_1,\ldots,x_{i-1},x_i',x_{i+1},\ldots,x_n)|\leq c_i. \tag{3.27}
 $$
+
 （尝试解释一下这个定义，也就是说，这个多元函数，在其他变量是固定的任意数时，如果只有一个变量发生了变化，那么函数值的整体变化会被一个相应的常数控制住。或者你可以想象，当我们固定了其他变量的时候，这个函数就变成了一个一维的函数，那么我们相应的作为bound的常数项一定大于等于这个一维函数的最大值和最小值之差（必要条件，因为其他变量可能被固定在任何位置）。总体来看，这个函数就是很乖的一个函数，在任何地方都不会过分敏感地增长，我们不妨叫他乖宝宝函数（？））
 
 满足上面这个约束的话，我们就有这个性质：对任意 $X_1, X_2, ..., X_n$ 有
+
 $$
 \Pr\left[f(X_1,\ldots,X_n)-\mathbb{E}[f(X_1,\ldots,X_n)]\geq t\right]\leq\exp\left(-\frac{2t^2}{\sum_{i=1}^nc_i^2}\right). \tag{3.28}
 $$
+
 也就是说，$f(X_1, X_2, ... X_n)$ 是 $O(\sqrt{\Sigma_{i=1}^nc_i^2}) - sub -Gaussian$ 的
 
 ### remark 3.13 
@@ -225,6 +230,7 @@ $$
 对于这种需要魔法的证明，我认为我的水平没法解释一个一般性的思路，但是能尽量把证明过程讲清楚。
 
 回忆一下sub-gaussian 的定义的形式 $(3.7)$ ，并且我们目标的方差代理是有求和的形式，这时候我们使用一下概率论中的一些魔法，使得我们的 $f(X_1,\ldots,X_n)-\mathbb{E}[f(X_1,\ldots,X_n)]$ 也能有求和的形式，我们定义下面这些式子。
+
 $$
 \begin{aligned}
 &Z_{0} =\mathbb{E}\left[f(X_1,\ldots,X_n)\right] \\
@@ -234,7 +240,9 @@ $$
 &Z_{n} =f(X_1,\ldots,X_n) 
 \end{aligned}
 $$
+
 首先我们可以通过全期望公式，证明所有 $Z_i$ 的期望都等于 $Z_0$ 的期望。
+
 $$
 \begin{aligned}
 \mathbb{E}[Z_{i}]& =\mathbb{E}\left[\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_i\right]\right] \\
@@ -242,24 +250,30 @@ $$
 &=Z_{0}
 \end{aligned}
 $$
+
 然后迅速得到推论， $D_i = Z_i - Z_{i-1}, \mathbb{E}[D_i] = 0$  .
 
 然后我们把我们的目标 $Z_n - Z_0$ 就能成求和形式了，也就是说
+
 $$
 \begin{aligned}
 Z_{n}-Z_{0}& =(Z_n-Z_{n-1})+(Z_{n-1}-Z_{n-2})+\cdots+(Z_1-Z_0) \\
 &=\sum_{i=1}^nD_i
 \end{aligned}
 $$
+
 如果每个 $D_i$ 都能被bounded的话，我们就基本能得到我们的结论了。
 
 接下来我们定义 $D_i$ 的上下界，尽管此时你可能会说，凭什么 $D_i$ 不会到正无穷或者负无穷去？确实，但是我们 ***theorem 3.12*** 的前置条件就能保证 $D_i$ 的上下界之差不会到正无穷，这间接保证了上下界不会是正无穷或负无穷，看接下来的证明就明白了
+
 $$
 \begin{aligned}A_i&=\inf_x\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_{i-1},X_i=x\right]-\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_{i-1}\right]\\B_i&=\sup_x\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_{i=1},X_i=x\right]-\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_{i-1}\right]\end{aligned}
 $$
+
 （注意这里的 $x$ 控制的是 $X_i$ 的取值）
 
 因为所有的 $X_i$ 都是相互独立的，所以我们对期望的计算可以展开成下面的积分形式（自变量相互独立保证了 $dP$ 中不用写成条件概率的形式。
+
 $$
 \begin{aligned}
 B_{i}-A_{i} &= \sup_x\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_{i-1},X_i=x\right]-\inf_x\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_{i-1},X_i=x\right]
@@ -270,14 +284,19 @@ B_{i}-A_{i} &= \sup_x\mathbb{E}\left[f(X_1,\ldots,X_n)|X_1,\ldots,X_{i-1},X_i=x\
 $$
 
 然后我们回忆一下 ***example 3.11*** ，发现 $A_i \le D_i \le B_i$，于是我们可以有
+
 $$
 \mathbb{E}\left[e^{\lambda(D_i-\mathbb{E}[D_i])}\right]\leq\exp\left[\frac{\lambda^2c_i^2}8\right]
 $$
+
 不过我们的目标是
+
 $$
 \mathbb{E}\left[e^{\lambda(\Sigma_i^nD_i-\mathbb{E}[\Sigma_i^nD_i])}\right]
 $$
+
 这时候我们又要用到全期望公式了，帮助我们把目标式子展开成多个***example 3.11*** 的乘积
+
 $$
 \begin{aligned}
 \mathbb{E}\left[ e^{\lambda(Z_{n}-Z_{0})}\right] & =\mathbb{E}\left[ e^{\lambda\sum_{i=1}^{n}(Z_{i}-Z_{i-1})}\right]  \\
@@ -288,6 +307,7 @@ $$
 &\leq e^{\lambda^2(\sum_{i=1}^nc_i^2)/8}
 \end{aligned}
 $$
+
 这样就完成了证明！
 
 ### 3.5.1 Bounds for Gaussian random variables
@@ -297,13 +317,17 @@ $$
 #### theorem 3.14
 
 对于光滑的函数 $f: \mathbb{R}^n \rightarrow \mathbb{R}$ ，如果 $X_1, ..., X_n$ 都是独立从 $\mathcal{N}(0,1)$ 中采样得到的。那么就有
+
 $$
 \operatorname{Var}(f(X_1,\ldots,X_n))\leq\mathbb{E}\left[\|\nabla f(X_1,\ldots,X_n)\|_2^2\right] \tag{3.29}
 $$
+
 更进一步，如果 $f$ 是 $L-lipschitz$ 的（在 $l_2$ 范数的意义下），也就是说， $\forall x, y$
+
 $$
 |f(x)-f(y)|\leq L\|x-y\|_2 \tag{3.30}
 $$
+
 那么对满足上面提到的两个条件的随机变量以及函数，我们有
 
 #### theorem 3.15
@@ -313,102 +337,3 @@ $$
 $$
 
 这个定理告诉我们一个事儿，对于一组独立同分布的符合标准的独立同分布的随机变量呢，如果对他们施加一个 $L-lipschitz$ 的变换，那么我们将得到一个 $L-sub-Gaussian$ 的随机变量。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
